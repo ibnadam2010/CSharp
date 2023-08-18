@@ -37,29 +37,29 @@ void afficherPlace(int place){
     Console.WriteLine("vous etes à la place : "+place);
 }
 
-void calculerPerimetre(string figureGeometrique, int Longueur=0, int Largeur=0, int Cote=0, int Rayon=0){
+string calculerPerimetre(string figureGeometrique, int Longueur=0, int Largeur=0, int Cote=0, int Rayon=0){
         switch (figureGeometrique)
         {
             case "cercle":
-            Console.WriteLine("Le périmètre du "+figureGeometrique+" de rayon "+Rayon+" cm = "+2*3.14*Rayon+" cm");
-            break;
+            return "Le périmètre du "+figureGeometrique+" de rayon "+Rayon+" cm = "+2*3.14*Rayon+" cm";
+  
 
             case "rectangle":
-            Console.WriteLine("Le périmètre du "+figureGeometrique+" de longueur "+Longueur+" cm et de largeur "+Largeur+" cm = "+ (Longueur+Largeur)*2 +" cm");
-            break;
+            return "Le périmètre du "+figureGeometrique+" de longueur "+Longueur+" cm et de largeur "+Largeur+" cm = "+ (Longueur+Largeur)*2 +" cm";
+           
 
             case "carré":
-            Console.WriteLine("Le périmètre du "+figureGeometrique+" de côté "+Cote+" cm = "+Cote*4+" cm");
-            break;
+            return "Le périmètre du "+figureGeometrique+" de côté "+Cote+" cm = "+Cote*4+" cm";
+          
             default:
-            Console.WriteLine("Aucune figure géometrique précisée");
-            break;
+            return "Aucune figure géometrique précisée";
+           
         }
 }
 
-calculerPerimetre("cercle",0,0,0,3);
-calculerPerimetre("rectangle",12,4,0,0);
-calculerPerimetre("carré",0,0,4,0);
+Console.WriteLine(calculerPerimetre("cercle",0,0,0,3));
+Console.WriteLine(calculerPerimetre("rectangle",12,4,0,0));
+Console.WriteLine(calculerPerimetre("carré",0,0,4,0));
 
 
 /* 
