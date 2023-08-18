@@ -1,20 +1,38 @@
 ﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
+/* 
+DECLARATION : Variable - Retrieve information 
+*/
 int note1 = 20;
 int note2 = 15;
 int moy = note1+note2 /2;
 Console.WriteLine("Hello, World! \n La moyenne des deux notes est : "+moy);
 
-int age= 20;
 
+/* 
+CONDITION : IF - ELSE Usage 
+*/
+int age = 20;
 if (age >= 15)
 Console.WriteLine("Vous etes majeur, bravo!");
 else
 Console.WriteLine("Vous etes mineur, désolé!");
 
-string mois ="Novembre";
 
+/* 
+BOUCLE : FOR - Usage 
+*/
+int order;
+for ( order = 1; order < 7; order++ ){
+ Console.WriteLine("vous etes à la place : "+order);
+}
+
+
+/* 
+CONDITION : CASES
+*/
+string mois ="Novembre";
 switch(mois)
 {
 case "Mars":
