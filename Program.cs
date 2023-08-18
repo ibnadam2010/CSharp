@@ -25,8 +25,41 @@ BOUCLE : FOR - Usage
 */
 int order;
 for ( order = 1; order < 7; order++ ){
- Console.WriteLine("vous etes à la place : "+order);
+    //Call declared function
+ afficherPlace(order);
 }
+
+
+/* 
+FONCTIONS : Declaration 
+*/
+void afficherPlace(int place){
+    Console.WriteLine("vous etes à la place : "+place);
+}
+
+void calculerPerimetre(string figureGeometrique, int Longueur=0, int Largeur=0, int Cote=0, int Rayon=0){
+        switch (figureGeometrique)
+        {
+            case "cercle":
+            Console.WriteLine("Le périmètre du "+figureGeometrique+" de rayon "+Rayon+" cm = "+2*3.14*Rayon+" cm");
+            break;
+
+            case "rectangle":
+            Console.WriteLine("Le périmètre du "+figureGeometrique+" de longueur "+Longueur+" cm et de largeur "+Largeur+" cm = "+ (Longueur+Largeur)*2 +" cm");
+            break;
+
+            case "carré":
+            Console.WriteLine("Le périmètre du "+figureGeometrique+" de côté "+Cote+" cm = "+Cote*4+" cm");
+            break;
+            default:
+            Console.WriteLine("Aucune figure géometrique précisée");
+            break;
+        }
+}
+
+calculerPerimetre("cercle",0,0,0,3);
+calculerPerimetre("rectangle",12,4,0,0);
+calculerPerimetre("carré",0,0,4,0);
 
 
 /* 
